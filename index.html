@@ -57,15 +57,22 @@
                         <nav class="nav_dropdown_list_wrapper w-dropdown-list"><a href="/events" class="nav_dropdown_list_item w-dropdown-link">Events</a><a href="#" class="nav_dropdown_list_item w-dropdown-link">Volunteers</a><a href="https://mc2.ejoinme.org/donate" target="_blank" class="nav_dropdown_list_item w-dropdown-link">Donate</a></nav>
                     </div>
                 </div>
-                <div class="nav_button_wrapper">
-                    <a data-wf--button--size="medium" href="https://portal.mathcirclesofchicago.dev/en/login" class="button_wrap w-variant-49481411-c817-c2a5-441b-cc4f97e30030 w-inline-block">
-                        <div data-wf--button-style--style="secondary" class="button_content w-variant-669803b7-e491-8b17-e828-2ff8d6af40df">
-                            <div data-wf--button-layout--layout="normal" class="button_layout">
-                                <div class="button_text">Portal</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+		<div class="nav_button_wrapper">
+		  <a data-wf--button--size="medium" href="https://portal.mathcirclesofchicago.dev/en/create_account" class="button_wrap w-variant-49481411-c817-c2a5-441b-cc4f97e30030 w-inline-block">
+		    <div data-wf--button-style--style="primary" class="button_content">
+                      <div data-wf--button-layout--layout="normal" class="button_layout">
+			<div class="button_text">Register</div>
+                      </div>
+		    </div>
+		  </a>
+		  <a data-wf--button--size="medium" href="https://portal.mathcirclesofchicago.dev/en/login" class="button_wrap w-variant-49481411-c817-c2a5-441b-cc4f97e30030 w-inline-block">
+		    <div data-wf--button-style--style="secondary" class="button_content w-variant-669803b7-e491-8b17-e828-2ff8d6af40df">
+                      <div data-wf--button-layout--layout="normal" class="button_layout">
+			<div class="button_text">Login</div>
+                      </div>
+		    </div>
+		  </a>
+		</div>
             </nav>
             <div class="menu-button w-nav-button">
                 <div class="icon-2 w-icon-nav-menu"></div>
@@ -693,6 +700,15 @@
             });
           });
         })();
+    </script>
+
+
+    <script>
+      if (document.cookie.includes('logged_in=true')) {
+	  let login_button = document.querySelector("a[href='https://portal.mathcirclesofchicago.dev/en/login']");
+	  login_button.querySelector('.button-text').text = 'Portal';
+	  document.querySelector("a[href='https://portal.mathcirclesofchicago.dev/en/create_account']").style = "display: none";
+      }
     </script>
 </body>
 
