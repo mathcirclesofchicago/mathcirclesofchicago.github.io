@@ -706,8 +706,8 @@
     <script>
       if (document.cookie.includes('logged_in=true')) {
 	  let login_button = document.querySelector("a[href='https://portal.mathcirclesofchicago.dev/en/login']");
-	  login_button.querySelector('.button-text').text = 'Portal';
-	  document.querySelector("a[href='https://portal.mathcirclesofchicago.dev/en/create_account']").style = "display: none";
+	  login_button.querySelector('.button_text').text = 'Portal';
+	  document.querySelector("a[href='https://portal.mathcirclesofchicago.dev/en/create_account']").style.display = 'none';
       }
     </script>
 </body>
